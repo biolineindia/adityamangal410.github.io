@@ -37,3 +37,5 @@ MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATH = './plugins'
 PLUGINS = ['ipynb.markup']
+
+THEME = "/Users/amangal/pelican-themes/iris"
