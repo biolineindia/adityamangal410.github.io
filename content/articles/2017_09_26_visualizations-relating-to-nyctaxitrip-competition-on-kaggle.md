@@ -1,11 +1,10 @@
 ---
 Title: Visualizations Relating to NYCTaxiTrip Competition on Kaggle
 Date: 2017-9-26 16:46
-Category: Visualizations
-Tags: Visualizations, R, DataScience
+Category: Projects
+Tags: Visualizations, R, DataScience, NYCTaxiTrip
 Slug: visualizations-relating-to-nyctaxitrip-competition-on-kaggle
 Authors: Aditya Mangal
-Summary:
 ---
 
 Cleanup

@@ -32,11 +32,10 @@ TEMPLATE = """
 ---
 Title: {title}
 Date: {year}-{month}-{day} {hour}:{minute:02d}
-Category: Test
+Category: Drafts
 Tags:
 Slug: {slug}
-Authors:
-Summary:
+Authors: Aditya Mangal
 ---
 
 """
@@ -130,9 +129,15 @@ def live_build(port=8080):
     local('make html')  # 2
     os.chdir('output')  # 3
     server = livereload.Server()  # 4
-    server.watch('../content/*.md',  # 5
+    server.watch('../content/articles/*.md',  # 5
+        livereload.shell('pelican -s ../pelicanconf.py -o ../output'))  # 6
+    server.watch('../content/pages/*.md',  # 5
+        livereload.shell('pelican -s ../pelicanconf.py -o ../output'))  # 6
+    server.watch('../content/images/',  # 5
         livereload.shell('pelican -s ../pelicanconf.py -o ../output'))  # 6
     server.watch('../Flex/',  # 7
+        livereload.shell('pelican -s ../pelicanconf.py -o ../output'))  # 8
+    server.watch('../pelicanconf.py',  # 7
         livereload.shell('pelican -s ../pelicanconf.py -o ../output'))  # 8
     server.watch('*.html')  # 9
     server.watch('*.css')  # 10
